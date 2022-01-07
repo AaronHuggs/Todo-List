@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import styles from "./TodoItem.module.css"
+import { FaTrash } from "react-icons/fa";
 
 const TodoItem = props => {
 
@@ -39,7 +40,12 @@ const TodoItem = props => {
         editMode.display = 'none';
     }
 
-
+    useEffect(() => {
+        return () => {
+            console.log('Cleaning up...');
+        }
+    }, [])
+    
     return(
         <li className={styles.item}>
             <div onDoubleClick={handleEditing} style={viewMode}>
@@ -53,7 +59,9 @@ const TodoItem = props => {
                 <button
                     onClick={() => props.deleteTodo(id)}
                 >
-                    Delete
+                    <FaTrash 
+                        style={{ color: "orangered", fontSize: "16px" }}
+                    />
                 </button>
                 <span style={completed ? completedStyle : null}>
                     {title}
