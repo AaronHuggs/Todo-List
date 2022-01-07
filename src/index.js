@@ -9,11 +9,17 @@ import "./functionBased/App.css"
 //router
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
+//Pages
+import About from './pages/About'
+import NoMatch from './pages/NoMatch'
+
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<TodoContainer />}></Route>
+                <Route path='/about' element={<About />}></Route>
+                <Route path='*' element={<NoMatch />}></Route>
             </Routes>
             
         </BrowserRouter> 

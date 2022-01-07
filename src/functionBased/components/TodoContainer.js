@@ -3,7 +3,7 @@ import {v4 as uuidv4} from "uuid";
 import TodosList from "./TodosList";
 import Header from "./Header";
 import InputTodo from "./InputTodo";
-
+import Navbar from "./Navbar";
 
 const TodoContainer = () => {
 
@@ -71,18 +71,22 @@ const TodoContainer = () => {
 
 
     return (
-        <div className='container'>
-            <div className='inner'>
-                <Header />  
-                <InputTodo addTodoProps={addTodoItem}/>
-                <TodosList 
-                    todos={todos} 
-                    handleCompleted={handleCompleted} 
-                    deleteTodo={deleteTodo}
-                    setUpdate={setUpdate}
-                />
+        <>
+            <Navbar />
+            <div className='container'>
+                <div className='inner'>
+                    <Header />  
+                    <InputTodo addTodoProps={addTodoItem}/>
+                    <TodosList 
+                        todos={todos} 
+                        handleCompleted={handleCompleted} 
+                        deleteTodo={deleteTodo}
+                        setUpdate={setUpdate}
+                    />
+                </div>
             </div>
-        </div>
+        </>
+        
     )
     
 }
