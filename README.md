@@ -12,7 +12,7 @@ This app was created using React
 
 ## Future Features
 
-• Add CSS
+~~• Add CSS~~  
 • Edit todo items  
-• Use SVG icons for buttons
+• Use SVG icons for buttons  
 • Add a menu and other pages using routing
