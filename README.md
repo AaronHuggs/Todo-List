@@ -15,4 +15,5 @@ This app was created using React
 ~~• Add CSS~~  
 ~~• Edit todo items~~  
 ~~• Use SVG icons for buttons~~  
-• Add a menu and other pages using routing
+~~• Add a menu and other pages using routing~~  
+  * Improve design and functionality (vague enough?)
